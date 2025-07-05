@@ -43,12 +43,12 @@ export default function GetApi() {
         
 
         {/* Input Section */}
-        <form onSubmit={handleApiSubmit} className="border rounded-xl p-5 flex flex-col bg-slate-700 mb-4">
+        <form onSubmit={handleApiSubmit} className="border rounded-xl p-5 flex flex-col bg-gray-900 mb-4">
           <h1 className="text-2xl font-extrabold mb-5 text-white">🌐 API ILLUSTRATOR</h1>
           <h2 className="text-lg text-white font-bold mb-2">Enter API Details</h2>
           <div className="flex mb-3">
             <input
-              className="border font-bold bg-white text-black rounded-sm p-2 w-full"
+              className="border font-bold bg-gray-900 text-white rounded-sm p-2 w-full"
               name="apiUrl"
               type="text"
               placeholder="API URL"
@@ -56,13 +56,13 @@ export default function GetApi() {
             />
           </div>
           <input
-            className="border bg-white font-bold text-black p-2 rounded-sm mb-3"
+            className="border bg-gray-900 font-bold text-white p-2 rounded-sm mb-3"
             type="text"
             name="apiKey"
             placeholder="API Key (if required)"
           />
           <button
-            className="bg-blue-600 font-bold text-white p-2 rounded-sm hover:bg-blue-700"
+            className="bg-blue-600 font-bold text-white p-2 rounded-sm hover:bg-blue-700 cursor-pointer"
             type="submit"
           >
             Fetch API Response
@@ -70,31 +70,31 @@ export default function GetApi() {
         </form>
 
         {/* API Response Section */}
-        <div className="bg-slate-700 text-white p-5 rounded-xl mb-4">
+        <div className="bg-gray-900 text-white p-5 rounded-xl mb-4">
           <h2 className="font-bold text-lg mb-2">API Response</h2>
           {error && <p className="text-red-400">{error}</p>}
           {apiResponse ? (
-            <div className="bg-white text-black p-3 rounded overflow-x-auto max-h-[400px]">
+            <div className="bg-gray-900 text-black p-3 rounded overflow-x-auto max-h-[400px]">
               <DynamicRender data={apiResponse} />
             </div>
           ) : (
-            <p className="bg-white font-bold rounded-sm h-8 flex px-3 items-center text-gray-500">No response yet.</p>
+            <p className="bg-gray-900 font-bold rounded-sm h-8 flex px-3 items-center text-gray-500">No response yet.</p>
           )}
         </div>
 
         {/* AI Prompt Section */}
-        <div className="bg-slate-700 text-white p-5 rounded-xl">
+        <div className="bg-gray-900  text-white p-5 rounded-xl">
           <h2 className="font-bold text-lg mb-2">Ask AI to Filter the Data</h2>
           <div className="flex mb-3">
             <input
               type="text"
               placeholder="e.g., Show only items with status false"
-              className="p-2 font-bold rounded-sm bg-white w-full text-black"
+              className="p-2 font-bold rounded-sm bg-gray-900 w-full text-white"
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
             />
             <button
-              className="bg-blue-600 text-white mx-2 p-2 rounded-md hover:bg-blue-600"
+              className="bg-blue-600 text-white mx-2 p-2 rounded-md hover:bg-blue-700 cursor-pointer"
               type="button"
               onClick={handleAiQuery}
             >
@@ -102,7 +102,7 @@ export default function GetApi() {
             </button>
           </div>
           <textarea
-            className="p-3 bg-white font-bold text-[17px] text-black rounded-sm w-full h-40 "
+            className="p-3 bg-gray-900 font-bold text-[17px] text-white rounded-sm w-full h-40 "
             placeholder="AI answer will appear here..."
             value={aiAnswer}
             readOnly

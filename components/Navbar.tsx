@@ -10,7 +10,8 @@ export default function Navbar({session}: {session: Session | null}){
                 {/* <Image src={"/next.svg"} alt="Logo" width={100} height={50} /> */}
                 <span className="text-white font-bold text-2xl" style={{ fontFamily: "vamos, sans-serif" }}>DEV AID</span>
             </Link>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-14">
+                <Link href="/" className="text-white hover:text-sky-500">Home</Link>
                 <Link href="/api-illustrator" className="text-white hover:text-sky-500">Api Illustrator</Link>
                 <Link href="/JSONFormatter" className="text-white hover:text-sky-500">JSON Formatter</Link>
                 <Link href="/moreTools" className="text-white hover:text-sky-500">More Tools</Link>
@@ -20,7 +21,7 @@ export default function Navbar({session}: {session: Session | null}){
                     </button>
                     ):(
                         <button
-                        className="bg-gray-800 py-1 px-2 rounded hover:bg-black-900 text-white cursor-pointer" onClick={login}>Sign In</button>
+                        className="bg-gray-800 py-1 px-2 rounded hover:bg-gray-950 text-white cursor-pointer" onClick={login}>Sign In</button>
                     )
                 }   
             </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import {Settings} from "lucide-react"
 import localFont from "next/font/local"
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -21,6 +21,9 @@ const WinkySans = localFont({
 export const metadata: Metadata = {
   title: "Dev Aid",
   description: "tools website for devlopers",
+  icons: {
+    icon: "/settings.png"
+  }
 };
 
 export default async function RootLayout({

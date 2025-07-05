@@ -25,7 +25,7 @@ export default function DynamicRender({ data, name, level = 0 }: Props) {
     return (
       <div style={indentStyle} className="py-1">
         {name && <span className="text-blue-600 font-medium">{name}: </span>}
-        <span className="text-gray-800">{JSON.stringify(data)}</span>
+        <span className="text-white">{JSON.stringify(data)}</span>
       </div>
     );
   }
