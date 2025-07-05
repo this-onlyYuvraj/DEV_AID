@@ -51,7 +51,7 @@ export default function JSONFormatter() {
                 <DynamicRender data={formattedJson} />
               </div>
             ) : (
-              <p className="bg-white font-bold rounded-sm h-8 flex px-3 items-center text-gray-500">
+              <p className="bg-gray-900 border-1 font-bold rounded-sm h-8 flex px-3 items-center text-white">
                 No response yet.
               </p>
             )}
