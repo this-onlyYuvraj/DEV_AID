@@ -14,6 +14,7 @@ export default function JSONFormatter() {
       setError(null);
     } catch (err) {
       setError('❌ Invalid JSON format');
+      console.error(err);
       setFormattedJson(null);
     }
   };

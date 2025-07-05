@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import DynamicRender from '@/components/DynamicRender';
+
 
 export default function JSONFormatter() {
 
