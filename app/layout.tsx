@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import {Settings} from "lucide-react"
 import localFont from "next/font/local"
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -9,9 +8,6 @@ const protest = localFont({
   src: './ProtestGuerrilla-Regular.ttf',
 })
 
-const vamos = localFont({
-  src: './vamos.woff2',
-})
 
 const WinkySans = localFont({
   src: './WinkySans-VariableFont_wght.ttf',

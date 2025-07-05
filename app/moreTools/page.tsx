@@ -1,9 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 
 
 export default function JSONFormatter() {
-
 
   return (
     <div className='flex justify-center items-center h-screen bg-slate-800'>
