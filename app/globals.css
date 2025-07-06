@@ -13,6 +13,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@font-face {
+  font-family: 'Vamos';
+  src: url('/vamos.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Vamos', sans-serif;
+}
 
 
 

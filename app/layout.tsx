@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   title: "Dev Aid",
   description: "tools website for devlopers",
   icons: {
-    icon: "/settings.png"
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   }
 };
 
