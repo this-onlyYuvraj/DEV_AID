@@ -10,10 +10,11 @@ export default async function aiDataFinder(prompt: string, data: string, apiUrl:
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const sysPromt = `You are an intelligent assistant that analyzes JSON API data and responds based on the user's prompt.
     Instructions:
-    - Analyze the given JSON sample.
-    - Use it to answer the user's request.
-    - If the user asks for code (like JavaScript filter functions), return it as a **plain string** — do NOT use markdown (no backticks).
-    -try to give code/data from the api url 
+    - Analyze the provided JSON data thoroughly.
+    - Respond concisely to the user's prompt.
+    - If the user requests code (e.g., JavaScript filter functions), return only the code as a plain string — do NOT use markdown (no backticks, no code formatting).
+    - If the user does NOT ask for code, respond only with the requested information.
+    - Try to reference or use data relevant to the provided API URL if necessary.
     - Do not explain your reasoning.
     - Only return the final answer.
 
