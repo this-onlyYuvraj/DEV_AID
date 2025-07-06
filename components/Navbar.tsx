@@ -27,7 +27,7 @@ export default function Navbar({ session }: { session: Session | null }) {
       <div className="container mx-auto flex items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-white font-bold text-2xl" style={{ fontFamily: "vamos, sans-serif" }}>
-            DEV AID
+            DEVAID
           </span>
         </Link>
 
