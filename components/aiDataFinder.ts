@@ -13,6 +13,7 @@ export default async function aiDataFinder(prompt: string, data: string, apiUrl:
     - Analyze the given JSON sample.
     - Use it to answer the user's request.
     - If the user asks for code (like JavaScript filter functions), return it as a **plain string** — do NOT use markdown (no backticks).
+    -try to give code/data from the api url 
     - Do not explain your reasoning.
     - Only return the final answer.
 
