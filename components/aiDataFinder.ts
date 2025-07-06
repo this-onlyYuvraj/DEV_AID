@@ -5,9 +5,9 @@ if (!apiKey) {
 }
 const genAI = new GoogleGenerativeAI(apiKey); 
 
-export default async function aiDataFinder(prompt: string, data: string) {
+export default async function aiDataFinder(prompt: string, data: string, apiUrl:string) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const sysPromt = `You are an intelligent assistant that analyzes JSON API data and responds based on the user's prompt.
     Instructions:
     - Analyze the given JSON sample.
@@ -15,9 +15,8 @@ export default async function aiDataFinder(prompt: string, data: string) {
     - If the user asks for code (like JavaScript filter functions), return it as a **plain string** — do NOT use markdown (no backticks).
     - Do not explain your reasoning.
     - Only return the final answer.
-    - try to give short and precise code.
 
-    Prompt: "${prompt}" JSON data:${data}`;
+    Prompt: "${prompt}" JSON data:${data} api Url ${apiUrl}` ;
 
     const result = await model.generateContent(sysPromt);
     const response = await result.response;

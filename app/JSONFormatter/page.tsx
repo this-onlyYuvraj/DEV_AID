@@ -48,7 +48,7 @@ export default function JSONFormatter() {
             {error ? (
               <p className="text-red-400">{error}</p>
             ) : formattedJson ? (
-              <div className="bg-white text-black p-3 rounded overflow-x-auto max-h-[400px]">
+              <div className="bg-gray-900 text-white p-3 rounded overflow-x-auto max-h-[400px]">
                 <DynamicRender data={formattedJson} />
               </div>
             ) : (

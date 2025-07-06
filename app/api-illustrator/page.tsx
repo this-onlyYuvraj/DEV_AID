@@ -10,15 +10,19 @@ export default function GetApi() {
   const [error, setError] = useState<string | null>(null);
   const [prompt, setPrompt] = useState<string>('');
   const [aiAnswer, setAiAnswer] = useState<string>('');
+  const [apiUrl, setApiUrl] = useState<string>('');
+
 
   const handleApiSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const apiUrl = (form.elements.namedItem('apiUrl') as HTMLInputElement)?.value;
+    setApiUrl(apiUrl)
     const apiKey = (form.elements.namedItem('apiKey') as HTMLInputElement)?.value;
 
     try {
       const result = await apifinder(apiUrl, apiKey);
+      setApiUrl(apiUrl)
       setApiResponse(result);
       setError(null);
       setAiAnswer(''); // Clear previous AI result
@@ -30,10 +34,10 @@ export default function GetApi() {
   };
 
   const handleAiQuery = async () => {
-    if (!prompt || !apiResponse) return;
+    if (!prompt || !apiResponse ) return;
 
     const stringifiedData = JSON.stringify(Array.isArray(apiResponse) ? apiResponse.slice(0, 10) : apiResponse);
-    const result = await aiDataFinder(prompt, stringifiedData);
+    const result = await aiDataFinder(prompt, stringifiedData, apiUrl);
     setAiAnswer(result?.text ?? 'No answer generated.');
   };
 
