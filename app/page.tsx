@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center px-4 py-16">
       <h1 className="text-5xl font-bold text-center mb-4">
-        Welcome to <span className="text-blue-500">API Illustrator</span>
+        Welcome to <span className="text-blue-500" style={{fontFamily:"vamos"}}>DEV AID</span>
       </h1>
       <p className="text-lg text-center max-w-xl mb-8 text-gray-300">
         A collection of powerful, developer-friendly tools starting with:
